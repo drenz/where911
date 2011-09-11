@@ -1,6 +1,33 @@
-<%= raw Cartographer::Header.new.to_s %>
+<h1> Where they were </h1>
 
-<div id="map">
-  <%= raw @map.to_html %>
-</div>
+<% if !@videos.empty? %>
+	<% @videos.each do |video|%>
+	
+		<div class="framey_video_profile">
+			<span class="framey_video_thumbnail">
+			<a href="<%= framey_video_path(video.name)%>">	
+			<%= image_tag video.medium_thumbnail_url%>
+			</a>
+			</span>
+			<span class="framey_video_info">
+				<div class="framey_video_name">
+					Name: <a href="<%= framey_video_path(video.name)%>"><%= video.name %></a>
+				</div>
+				<div class="framey_video_duration">
+					Length: <%= video.duration %> seconds
+				</div>
+				<div class="framey_video_filesize">
+					Filesize: <%= video.filesize / 1024 %> KB
+				</div>
+				<div class="framey_video_date">
+					Created at: <%= video.created_at %>
+				</div>								
+			</span>
+		</div>
+		<hr/>
 
+
+	<%end%>
+<% else %>
+	<h3>No videos were recorded, yet </h3>
+<% end %>

@@ -25,31 +25,7 @@ class VideosController < ApplicationController
   end
   
   def index
-    wtc = [40.711626, -74.010714]
-    @videos = Video.all
-
-    @map = Cartographer::Gmap.new('map',
-                                    :type => 'terrain',
-                                    :center => wtc,
-                                    :zoom => 14,
-                                    :controls => [:zoom]
-                                 )
-    markers = []
-    @icon = Cartographer::Gicon.new()
-    @map.icons <<  @icon
-    
-    @videos.each do |video|
-      marker = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
-                 :position => [video.latitude,video.longitude],
-                 :info_window_url => "/videos/#{video.id}", :icon => @icon)
-      @map.markers << marker
-    end
-    
-    marker = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
-                :position => wtc,
-                :info_window_url => "/videos/#{}", :icon => @icon)
-     @map.markers << marker
-    
+    @videos = Video.paginate(:page => params[:page], :per_page => 20)
   end
   
   def show

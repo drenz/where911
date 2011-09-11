@@ -91,6 +91,7 @@ GEM
       jwt (>= 0.1.2)
       multi_json (>= 1.0.3)
     tzinfo (0.3.29)
+    will_paginate (3.0.0)
     youtube_it (2.0.1)
       builder
       faraday (>= 0.7.3)
@@ -106,4 +107,5 @@ DEPENDENCIES
   rails (= 3.0.10)
   sqlite3
   twilio-ruby
+  will_paginate
   youtube_it

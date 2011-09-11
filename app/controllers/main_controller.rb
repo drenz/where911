@@ -4,7 +4,7 @@ class MainController < ApplicationController
   require 'twilio-ruby'
 
   def index
-    
+    @videos = Video.all
   end
   
   def send_sms

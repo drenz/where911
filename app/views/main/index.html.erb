@@ -27,17 +27,29 @@
 		<div style="float:left; padding-left: 50px; width: 250px; ">
 			<div>
 				<a href="<%= url_for :controller => :main, :action => :tok %>" style="text-decoration:none">
-					<div style="background: #aaffaa; border-radius: 20px; font-size: 30px; height: 80px; padding-top: 30px">
-						Send a video message!
+					<div class="button">
+						Record video message
 					</div>
 				</a>
 			</div>
 			<div style="padding-top: 50px">
 				<a href="<%= url_for :controller => :main, :action => :sms %>" style="text-decoration:none">
-					<div style="background: #aaffaa; border-radius: 20px; font-size: 30px; height: 80px; padding-top: 30px">
-						Send a text message (SMS)!
+					<div class="button" >
+						Send a text message!
 					</div>
 				</a>				 
+			</div>
+			<div>
+				
+				<% @videos.each do |video|%>
+
+					<div >
+						<span class="framey_video_thumbnail">
+						<a href="<%= framey_video_path(video.name)%>">	
+						<%= image_tag video.medium_thumbnail_url%>
+						</a>
+						</span>
+				<%end%>
 			</div>
 		</div>
 		<div style="clear:both">

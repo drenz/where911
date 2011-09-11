@@ -1,25 +1,4 @@
 <div id="framey_recoder">
 	<%= render_recorder({:max_time => 60}) %>
-	<%= form_for @video do |video_form| %>
-		<p>
-			<%= video_form.label :person_name, "Name" %>
-			<%= video_form.text_field :person_name %>
-		</p>
-		
-		<p>		
-			<%= video_form.label :description %>
-			<%= video_form.text_area :description %>
-		</p>
-		
-		<p>
-			<%= video_form.label :latitude %>
-			<%= video_form.text_field :latitude %>
-		</p>
-		
-		<p>
-			<%= video_form.label :longitude %>
-			<%= video_form.text_field :longitude %>
-		</p>
-				
-	<% end %>
+
 </div>
