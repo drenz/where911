@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhereWereYou</title>
+
+ <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  <%= stylesheet_link_tag :all %>
+
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'swfobject.js' %>
+  <%= javascript_include_tag 'framey.js' %>
+  <%= javascript_include_tag 'gmap3.js' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="mainHeader" class="clearfix">
+    <div class="narrow center">
+      <div style="float:left; width: 300px; font-size: 20px; padding-top: 2px">
+				Where were you on 9/11?  
+      </div>
+      <div style="float:left; width: 150px; padding-top: 3px">
+				<!-- begin Tweet -->		
+				<div style="height:35px; width:150px;"><a href="http://twitter.com/share" class="twitter-share-button" data-text="Where were you on 9/11?" data-count="horizontal" data-via="@Where911">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+				<!-- end Tweet -->		
+			</div>
+      <div style="float:left; width: 400px">
+				<!-- begin FB Like -->
+				<div id="fb-root"></div>
+				<script>(function(d){
+				  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+				  js = d.createElement('script'); js.id = id; js.async = true;
+				  js.src = "//connect.facebook.net/en_US/all.js#appId=255045101202205&xfbml=1";
+				  d.getElementsByTagName('head')[0].appendChild(js);
+				}(document));</script>
+				<div class="fb-like" data-href="where911.com" data-send="true" data-width="400" data-show-faces="false"></div>
+				<!-- end FB Like -->
+			</div>
+    </div>
+  </div>
+  	
+	<%= yield %>
+
+	<div id="footer" class="clearfix">
+  </div>
+</body>
+</html>
