@@ -1,13 +1,25 @@
-<div style="width: 800px; padding-top: 50px; padding-left: 200px; font-size: 30px">
+<div style="width: 800px; padding-top: 50px; padding-bottom: 50px; padding-left: 200px; font-size: 30px">
 	<form name="input" action="<%= url_for :controller => :main, :action => :send_sms %>" method="get">
-		Phone number: <input type="tel" name="to_number"/>
-		<br/>
-		<i>for US numbers, start with +1</i>
-		<br/>
-		<br/>
-		Message: <input type="text" name="message" value="Where were you on 9/11?  http://where911.com" size="100"/>
-		<br/>
-		<br/>
-		<input type="submit" value="Submit" />
+		<table>
+			<tr>
+				<td style="text-align: right">Phone:</td>
+				<td style="text-align: left">
+					<input type="tel" name="to_number" style="font-size:30px"/>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right">Message:</td>
+				<td style="text-align: left">
+					<input type="text" name="message" value="Where were you on 9/11?  http://where911.com" size="65" style="font-size:30px"/>
+				</td>
+			</tr>
+			<tr>
+				<td/>
+				<td style="text-align: left">
+					<input type="submit" value="Submit" style="font-size:30px"/>
+				</td>
+			</tr>
+		</table>
 	</form>
 </div>
+>
