@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910221922) do
+ActiveRecord::Schema.define(:version => 20110911171802) do
+
+  create_table "sms_logs", :force => true do |t|
+    t.string   "to_number"
+    t.string   "message"
+    t.string   "sid"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "videos", :force => true do |t|
     t.string   "name"

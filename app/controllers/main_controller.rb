@@ -17,6 +17,7 @@ class MainController < ApplicationController
     @to_number = params[:to_number]
     @message = params[:message]
     @account = @client.account
-    @response = @account.sms.messages.create({:to => '+16506463891', :from => '+16504927047', :body => @message})  
+    @response = @account.sms.messages.create({:to => '+16506463891', :from => '+16504927047', :body => @message}) 
+    SmsLog.create(:to_number => @to_number, :message => @message, :sid => @response.sid, :status => @response.status)
   end
 end
