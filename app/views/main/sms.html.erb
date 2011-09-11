@@ -1,3 +1,13 @@
 <div style="width: 800px; padding-top: 50px; padding-left: 200px; font-size: 30px">
-	
+	<form name="input" action="<%= url_for :controller => :main, :action => :send_sms %>" method="get">
+		Phone number: <input type="tel" name="user"/>
+		<br/>
+		<i>for US numbers, start with +1</i>
+		<br/>
+		<br/>
+		Message: <input type="text" name="message" value="Where were you on 9/11?  http://where911.com"/>
+		<br/>
+		<br/>
+		<input type="submit" value="Submit" />
+	</form>
 </div>
