@@ -27,7 +27,7 @@ class VideosController < ApplicationController
   def index
     wtc = [40.711626, -74.010714]
     @videos = Video.all
-    # example
+
     @map = Cartographer::Gmap.new('map',
                                     :type => 'terrain',
                                     :center => wtc,
