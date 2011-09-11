@@ -32,3 +32,5 @@ gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'youtube_it'
+
+gem 'twilio-ruby'

@@ -52,6 +52,7 @@ WhereWereYou::Application.routes.draw do
 
   # the scratch controller is for testing...
   match '/scratch/:action' => 'scratch#:action'
+  match '/main/:action' => 'main#:action'
 
   root :to => "main#index"
 
