@@ -1,6 +1,6 @@
 WhereWereYou::Application.routes.draw do
 
-  post "/framey/callback" => "framey/videos#callback"
+  post "/vidoes/callback" => "videos#callback"
   resources :videos, :only => [:index, :show, :new], :controller => "videos"
 
   # The priority is based upon order of creation:
