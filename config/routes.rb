@@ -53,7 +53,7 @@ WhereWereYou::Application.routes.draw do
   # the scratch controller is for testing...
   match '/scratch/:action' => 'scratch#:action'
 
-  root :to => "videos#index"
+  root :to => "main#index"
 
   # See how all your routes lay out with "rake routes"
 

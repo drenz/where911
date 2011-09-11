@@ -1,0 +1,11 @@
+<%# all_youtube_videos = ["G3VH6nSqh6s","1piQIsxto9o","fvj6zdWLUuk","ZE4wjGp-80A","eMscTHPaXmc","YCh0gQrX3UY"] %>
+<% youtube_videos = ["eMscTHPaXmc","YCh0gQrX3UY"] %>
+
+<% youtube_videos.each do |vid| %>
+	<div style="float:left; width: 400px">
+		<iframe class="youtube-player" type="text/html" width="400" height="250" src="http://www.youtube.com/embed/<%= vid %>?version=3&playlist=<%= vid %>&autoplay=1&rel=0&border=0&autohide=1&controls=0&loop=1&sound=0" frameborder="0">
+		</iframe>
+	</div>
+<% end %>
+
+<div style="clear:both">
