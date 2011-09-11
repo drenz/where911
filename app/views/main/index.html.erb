@@ -1,11 +1,27 @@
 <%# all_youtube_videos = ["G3VH6nSqh6s","1piQIsxto9o","fvj6zdWLUuk","ZE4wjGp-80A","eMscTHPaXmc","YCh0gQrX3UY"] %>
-<% youtube_videos = ["eMscTHPaXmc","YCh0gQrX3UY"] %>
+<% youtube_video_sets = [["eMscTHPaXmc", "YCh0gQrX3UY", "QHXxIZdFO-E","1piQIsxto9o"],
+                         ["KFsGnePc2ko", "m3HSvnPrUBI", "SE9TfA5KEc8"]] %>
 
-<% youtube_videos.each do |vid| %>
+<center>
+<div style="width: 800px">
+<% youtube_video_sets.each do |vid_sets| %>
+	<% vid_sets = vid_sets.sample(vid_sets.size) %>
 	<div style="float:left; width: 400px">
-		<iframe class="youtube-player" type="text/html" width="400" height="250" src="http://www.youtube.com/embed/<%= vid %>?version=3&playlist=<%= vid %>&autoplay=1&rel=0&border=0&autohide=1&controls=0&loop=1&sound=0" frameborder="0">
+		<iframe class="youtube-player" type="text/html" width="400" height="250" src="http://www.youtube.com/embed/<%= vid_sets.first %>?version=3&playlist=<%= vid_sets.join(',') %>&autoplay=1&rel=0&border=0&autohide=1&controls=0&loop=1&sound=0" frameborder="0">
 		</iframe>
 	</div>
 <% end %>
-
 <div style="clear:both">
+</div>
+</center>
+	
+<div style="text-align: center; padding:30px">
+	<div id="fb-root"></div>
+	<script>(function(d){
+	  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+	  js = d.createElement('script'); js.id = id; js.async = true;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  d.getElementsByTagName('head')[0].appendChild(js);
+	}(document));</script>
+	<div class="fb-comments" data-href="where911.com" data-num-posts="20" data-width="500"></div>
+</div>
