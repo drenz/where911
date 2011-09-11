@@ -7,7 +7,7 @@
 <% youtube_video_sets.each do |vid_sets| %>
 	<% vid_sets = vid_sets.sample(vid_sets.size) %>
 	<div style="float:left; width: 400px">
-		<iframe class="youtube-player" type="text/html" width="400" height="250" src="http://www.youtube.com/embed/<%= vid_sets.first %>?version=3&playlist=<%= vid_sets.join(',') %>&autoplay=1&rel=0&border=0&autohide=1&controls=0&loop=1&sound=0" frameborder="0">
+		<iframe class="youtube-player" type="text/html" width="400" height="250" src="http://www.youtube.com/embed/<%= vid_sets.first %>?version=3&playlist=<%= vid_sets.last(vid_sets.size-1).join(',') %>&autoplay=1&rel=0&border=0&autohide=1&controls=0&loop=1&sound=0" frameborder="0">
 		</iframe>
 	</div>
 <% end %>
