@@ -30,3 +30,5 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 gem 'jquery-rails'
+
+gem 'youtube_it'
