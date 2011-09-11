@@ -15,4 +15,8 @@ class ScratchController < ApplicationController
     @message = @account.sms.messages.create({:to => '+16506463891', :from => '+16504927047', :body => "hello"})
     render :text => "sent message"
   end
+  
+  def sms_log
+    @sms_logs = SmsLog.find(:all)
+  end
 end

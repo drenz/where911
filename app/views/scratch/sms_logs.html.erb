@@ -1,0 +1,18 @@
+<table>
+<% @sms_logs.each do |sms_log| %>
+	<tr>
+		<td>
+			<%= sms_log.to_number %>
+		</td>
+		<td>
+			<%= sms_log.message %>
+		</td>
+		<td>
+			<%= sms_log.sid %>
+		</td>
+		<td>
+			<%= sms_log.status %>
+		</td>
+	</tr>
+<% end %>
+</table>
