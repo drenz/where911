@@ -15,8 +15,8 @@ class MainController < ApplicationController
     @client = Twilio::REST::Client.new(@account_sid, @auth_token)
 
     @to_number = params[:to_number]
-    @body = params[:body]
+    @message = params[:message]
     @account = @client.account
-    @message = @account.sms.messages.create({:to => '+16506463891', :from => '+16504927047', :body => @body})  
+    @response = @account.sms.messages.create({:to => '+16506463891', :from => '+16504927047', :body => @message})  
   end
 end
