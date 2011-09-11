@@ -39,17 +39,16 @@
 					</div>
 				</a>				 
 			</div>
-			<div style="text-align: center; margin: 0 auto;">
+			<br/>
+			<br/>
+			<div style="margin-top: 20px; text-align: center; margin: 0 auto; float: center; padding">
 				
 				<% @videos.each do |video|%>
-
-					<div >
-						<span class="framey_video_thumbnail">
-						<a href="<%= video_path(video.name)%>">	
-						<%= image_tag video.medium_thumbnail_url%>
-						</a>
-						</span>
-					</div>
+					<span class="framey_video_thumbnail">
+					<a href="<%= video_path(video.name)%>">	
+					<%= image_tag video.medium_thumbnail_url%>
+					</a>
+					</span>
 				<%end%>
 			</div>
 		</div>
