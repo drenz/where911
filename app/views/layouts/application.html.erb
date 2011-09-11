@@ -12,6 +12,17 @@
   <%= javascript_include_tag 'framey.js' %>
   <%= javascript_include_tag 'gmap3.js' %>
   <%= csrf_meta_tag %>
+
+
+	
+  <link rel="image_src" type="image/jpeg" href="http://b.vimeocdn.com/ts/867/934/86793480_100.jpg" />
+  <meta property="og:site_name" content="<%= 'http://where911.com' %>"/>
+  <meta property="og:url"       content="<%= request.url %>"/>
+  <meta property="og:title"     content="Where were you on 9/11?"/>
+  <meta property="og:type"      content="<%= 'website' %>"/>
+  <meta property="og:image"     content="<%= image %>"/>
+  <meta property="og:description"
+            content="A video tribute for September 11, 2001.  Where were you?"/>
 </head>
 <body>
 	<div id="mainHeader" class="clearfix">
