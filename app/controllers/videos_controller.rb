@@ -45,6 +45,11 @@ class VideosController < ApplicationController
       @map.markers << marker
     end
     
+    marker = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
+                :position => wtc,
+                :info_window_url => "/videos/#{}", :icon => @icon)
+     @map.markers << marker
+    
   end
   
   def show
